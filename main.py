@@ -73,7 +73,7 @@ previous_stream = None
 log("**STARTED OWL AUTO :cowboy:**",4)
 
 while True:
-    url = get_live_stream_url(debug_id)
+    url = get_live_stream_url(real_id)
     if not url == None:
         if not has_streamed:
             #if this is the first time that OWL has started streaming during the current session, launch up selenium (No need to launch selenium until they start streaming to save ram)
