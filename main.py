@@ -61,7 +61,8 @@ def get_live_stream_url(channel_id):
 
 has_streamed = False
 previous_stream = None
-
+time_until_5_tokens = 6
+estimated_tokens_earnt = 0
 log("**STARTED OWL AUTO :cowboy:**",4)
 
 while True:
@@ -88,12 +89,19 @@ while True:
 
         if url != driver.current_url:
             logerror("url should be: "+url+", but is:"+driver.current_url)
+        time_until_5_tokens -= 1
+        if time_until_5_tokens == 0:
+            time_until_5_tokens = 6
+            estimated_tokens_earnt += 5
         
-        log("still watching stream :thumbsup:, about to reload... (next reload in **650 secs**)", 4)
+        if not estimated_tokens_earnt == 0: 
+            log("still watching stream :thumbsup:, about to reload... (next reload in **10 minutes**). **Estimated tokens earnt: " + str(estimated_tokens_earnt)+"**", 4)
+        else:
+            log("still watching stream :thumbsup:, about to reload... (next reload in **10 minutes**).", 4)
         #reload because sometimes youtube flags as inactive and also as a failsafe if something in youtube stream breaks
-        time.sleep(650)
+        time.sleep(10*60)
     else:
-        log("OWL is __not__ streaming right now :sob:, checking again in **400 secs**", 4)
+        log("OWL is __not__ streaming right now :sob:, checking again in **7 minutes**", 4)
         #check every 400 secs if OWL is streaming
-        time.sleep(400)
+        time.sleep(7*60)
         
