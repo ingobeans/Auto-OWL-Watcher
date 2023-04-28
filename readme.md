@@ -5,7 +5,7 @@ Automatically watch Overwatch League youtube streams to generate Overwatch Leagu
 
 
 
-#### -------------------  Setup instructions for Auto OWL Watcher  -------------------
+## **-------------------  Setup instructions for Auto OWL Watcher  -------------------**
 
 1. Go into settings.py and change youtube_api_key to your Youtube API Key. (How to get API key:  https://blog.hubspot.com/website/how-to-get-youtube-api-key)
 
@@ -14,14 +14,14 @@ Automatically watch Overwatch League youtube streams to generate Overwatch Leagu
 
 
 
-#### -------------------  Tips  -------------------
+## **-------------------  Tips  -------------------**
 
 Personally I enable discord_webhook_logging (and setup a discord webhook, and edit webhook_url), turn down logging_level to 3 and open the script using "launch headless.vbs". This way there is no annoying command prompt window and it still logs if it runs in to an error and when it begins watching a stream (through discord).
 
 
 
 
-#### -------------------  How it works  -------------------
+## **-------------------  How it works  -------------------**
 
 Auto OWL Watcher works by checking if OWL youtube channel is streaming every few minutes, if so it opens a headless (hidden) selenium window that watches the stream. 
 It uses your chrome data to connect to your youtube channel. This way you receive OWL tokens (as long as you are logged in to youtube in chrome and also has connected your youtube account to battle.net for rewards)
@@ -29,7 +29,7 @@ It uses your chrome data to connect to your youtube channel. This way you receiv
 
 
 
-#### ------------------- Troubleshooting  -------------------
+## **------------------- Troubleshooting  -------------------**
 
 "No rewards getting received"- Could be due to not being logged in to youtube in google chrome, or not connected youtube channel to battle.net (like this: https://dotesports.com/overwatch/news/how-to-earn-overwatch-league-tokens)
 
