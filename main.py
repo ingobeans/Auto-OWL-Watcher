@@ -1,30 +1,20 @@
 import google.auth
 from googleapiclient.discovery import build
-import time, requests, os
+import time, requests, os, re
 from selenium import webdriver  
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from settings import *
 
 #made by github.com/ingobeans
 
 
+if not discord_webhook_logging:
+    os.system("color")
 
-real_id = "UCiAInBL9kUzz1XRxk66v-gw"
-
-#-----------[SCRIPT SETTINGS]-----------
-discord_webhook_logging = True
-webhook_url = "ENTER WEBHOOK URL"
-youtube_api_key = "ENTER YOUTUBE API KEY"
-
+owl_id = "UCiAInBL9kUzz1XRxk66v-gw"
 #use the default chrome data dir as selenium user-data-dir (this is so that you are logged in to your youtube account saved in chrome)
 chrome_data_path = os.getenv('LOCALAPPDATA') + "\\Google\\Chrome\\User Data"
-
-#-----------[LOGGING LEVELS]-----------
-#4 - VERBOSE / logs everything, current status, errors
-#3 - DEFAULT / logs errors and whenever it starts watching a new stream (This is the default option)
-#2 - ERRORS / logs errors
-#1 - NOTHING / logs nothing 
-logging_level = 3
 
 def log(msg, log_level_requirement):
     if logging_level == 1:
@@ -34,7 +24,9 @@ def log(msg, log_level_requirement):
         if discord_webhook_logging:
             requests.post(url=webhook_url, json={"content":msg})
         else:
-            print(msg)
+            msg = re.sub(r'\*\*|__', "", msg)
+            msg = re.sub(r':\w+:', '', msg)
+            print("\033[96m"+msg+"\033[0m")
 
 def logerror(msg):
     msg = "[__**PROBLEM**__]:    "+msg
@@ -73,7 +65,7 @@ previous_stream = None
 log("**STARTED OWL AUTO :cowboy:**",4)
 
 while True:
-    url = get_live_stream_url(real_id)
+    url = get_live_stream_url(owl_id)
     if not url == None:
         if not has_streamed:
             #if this is the first time that OWL has started streaming during the current session, launch up selenium (No need to launch selenium until they start streaming to save ram)
