@@ -5,7 +5,7 @@ Automatically watch Overwatch League youtube streams to generate Overwatch Leagu
 
 
 
-## **-------------------  Setup instructions for Auto OWL Watcher  -------------------**
+## **-------------------  Setup instructions  -------------------**
 
 1. Go into settings.py and change youtube_api_key to your Youtube API Key. (How to get API key:  https://blog.hubspot.com/website/how-to-get-youtube-api-key)
 
