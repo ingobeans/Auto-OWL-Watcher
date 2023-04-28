@@ -16,7 +16,7 @@ Automatically watch Overwatch League youtube streams to generate Overwatch Leagu
 
 #### -------------------  Tips  -------------------
 
-Personally I enable discord_webhook_logging, turn down logging_level to 3 and open the script using "launch headless.vbs". This way there is no annoying command prompt window and it still logs if it runs in to an error and when it begins watching a stream (through discord).
+Personally I enable discord_webhook_logging (and setup a discord webhook, and edit webhook_url), turn down logging_level to 3 and open the script using "launch headless.vbs". This way there is no annoying command prompt window and it still logs if it runs in to an error and when it begins watching a stream (through discord).
 
 
 
