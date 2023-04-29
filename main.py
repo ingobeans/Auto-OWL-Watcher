@@ -22,7 +22,7 @@ def log(msg, log_level_requirement):
     
     if logging_level >= log_level_requirement:
         if discord_webhook_logging:
-            requests.post(url=webhook_url, json={"content":msg})
+            requests.post(url=webhook_url, json={"content":msg,"username":"Auto OWL Status","avatar_url":"https://yt3.googleusercontent.com/ytc/AGIKgqPyXqPzHBB7rV5aoyDT6KGVYyMPx6rsMKkNh7d9=s900-c-k-c0x00ffffff-no-rj"})
         else:
             msg = re.sub(r'\*\*|__', "", msg)
             msg = re.sub(r':\w+:', '', msg)
