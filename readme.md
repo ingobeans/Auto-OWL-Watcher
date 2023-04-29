@@ -28,7 +28,10 @@ It uses your chrome data to connect to your youtube channel. This way you receiv
 
 ## **------------------- Troubleshooting  -------------------**
 
-"No rewards getting received"- Could be due to not being logged in to youtube in google chrome, or not connected youtube channel to battle.net (like this: https://dotesports.com/overwatch/news/how-to-earn-overwatch-league-tokens)
+"No rewards getting received" - Could be due to not being logged in to youtube in google chrome, or not connected youtube channel to battle.net (like this: https://dotesports.com/overwatch/news/how-to-earn-overwatch-league-tokens)
+
+
+"Opening launch headless.vbs just shows an error popup saying that the system cannot find the file specified" - Make sure Python is installed, if it is, try restarting your PC, then making sure Python is added to path.
 
 For errors with script crashing on start, could be due to youtube api token being incorrect
 
