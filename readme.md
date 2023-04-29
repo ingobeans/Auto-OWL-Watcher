@@ -13,7 +13,9 @@ Automatically watch Overwatch League youtube streams to generate Overwatch Leagu
 
 3. Go into settings.py and change youtube_api_key to your Youtube API Key. (How to get API key:  https://blog.hubspot.com/website/how-to-get-youtube-api-key)
 
-4. You can now run the script by running "launch headless.vbs"
+4. Create a discord webhook (for logging) and change webhook_url to your webhook url in settings.py. You can also set discord_webhook_logging to False, if you'd rather want logging in the console.
+
+5. You can now run the script by running "launch headless.vbs"
 
 
 ## **-------------------  How it works  -------------------**
