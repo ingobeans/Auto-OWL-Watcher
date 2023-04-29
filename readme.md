@@ -7,18 +7,13 @@ Automatically watch Overwatch League youtube streams to generate Overwatch Leagu
 
 ## **-------------------  Setup instructions  -------------------**
 
-1. Go into settings.py and change youtube_api_key to your Youtube API Key. (How to get API key:  https://blog.hubspot.com/website/how-to-get-youtube-api-key)
+1. Install Python.
 
-2. You can also setup a discord webhook, and change webhook_url to your webhook url. This is if you want the script to log to your discord channel reather then the console output. I recommend turning down logging_level to 3, if you're using webhook logging (so you dont get spammed).
+2. Run this command in cmd: `pip install google-api-python-client, google-auth, requests, selenium`
 
+3. Go into settings.py and change youtube_api_key to your Youtube API Key. (How to get API key:  https://blog.hubspot.com/website/how-to-get-youtube-api-key)
 
-
-
-## **-------------------  Tips  -------------------**
-
-Personally I enable discord_webhook_logging (and setup a discord webhook, and edit webhook_url), turn down logging_level to 3 and open the script using "launch headless.vbs". This way there is no annoying command prompt window and it still logs if it runs in to an error and when it begins watching a stream (through discord).
-
-
+4. You can now run the script by running "launch headless.vbs"
 
 
 ## **-------------------  How it works  -------------------**
