@@ -59,7 +59,7 @@ def get_live_stream_url(channel_id):
         quit()
 
 
-has_streamed = False
+selenium_open = False
 previous_stream = None
 time_until_5_tokens = 6
 estimated_tokens_earnt = 0
@@ -68,13 +68,13 @@ log("**STARTED OWL AUTO :cowboy:**",4)
 while True:
     url = get_live_stream_url(owl_id)
     if not url == None:
-        if not has_streamed:
-            #if this is the first time that OWL has started streaming during the current session, launch up selenium (No need to launch selenium until they start streaming to save ram)
+        if not selenium_open:
+            #if selenium isn't open, launch up selenium (No need to launch selenium until they start streaming to save ram)
             chrome_options = Options()
             chrome_options.add_argument("--user-data-dir="+chrome_data_path)
             chrome_options.add_argument("--headless")
             driver = webdriver.Chrome(options=chrome_options) 
-        has_streamed = True
+        selenium_open = True
         driver.get(url)
         time.sleep(5)
         try:
@@ -101,7 +101,10 @@ while True:
         #reload because sometimes youtube flags as inactive and also as a failsafe if something in youtube stream breaks
         time.sleep(10*60)
     else:
-        log("OWL is __not__ streaming right now :sob:, checking again in **7 minutes**", 4)
-        #check every 400 secs if OWL is streaming
-        time.sleep(7*60)
+        log("OWL is __not__ streaming right now :sob:, checking again in **15 minutes**", 4)
+        if selenium_open: 
+            driver.quit() #close selenium if OWL isn't streaming anymore
+        
+        #check every 15 minutes if OWL is streaming
+        time.sleep(15*60)
         

@@ -33,6 +33,7 @@ It uses your chrome data to connect to your youtube channel. This way you receiv
 
 "Opening launch headless.vbs just shows an error popup saying that the system cannot find the file specified" - Make sure Python is installed, if it is, try restarting your PC, then making sure Python is added to path.
 
+
 For errors with script crashing on start, could be due to youtube api token being incorrect
 
 Otherwise feel free to ask for help
