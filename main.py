@@ -99,7 +99,7 @@ while True:
         else:
             log("still watching stream :thumbsup:, about to reload... (next reload in **10 minutes**).", 4)
         #reload because sometimes youtube flags as inactive and also as a failsafe if something in youtube stream breaks
-        time.sleep(10*60)
+        time.sleep(15*60)
     else:
         log("OWL is __not__ streaming right now :sob:, checking again in **15 minutes**", 4)
         if selenium_open: 
