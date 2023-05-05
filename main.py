@@ -61,7 +61,7 @@ def get_live_stream_url(channel_id):
 
 selenium_open = False
 previous_stream = None
-time_until_5_tokens = 6
+time_until_5_tokens = 4
 estimated_tokens_earnt = 0
 log("**STARTED OWL AUTO :cowboy:**",4)
 
@@ -91,13 +91,13 @@ while True:
             logerror("url should be: "+url+", but is:"+driver.current_url)
         time_until_5_tokens -= 1
         if time_until_5_tokens == 0:
-            time_until_5_tokens = 6
+            time_until_5_tokens = 4
             estimated_tokens_earnt += 5
         
         if not estimated_tokens_earnt == 0: 
-            log("still watching stream :thumbsup:, about to reload... (next reload in **10 minutes**). **Estimated tokens earnt: " + str(estimated_tokens_earnt)+"**", 4)
+            log("still watching stream :thumbsup:, about to reload... (next reload in **15 minutes**). **Estimated tokens earnt: " + str(estimated_tokens_earnt)+"**", 4)
         else:
-            log("still watching stream :thumbsup:, about to reload... (next reload in **10 minutes**).", 4)
+            log("still watching stream :thumbsup:, about to reload... (next reload in **15 minutes**).", 4)
         #reload because sometimes youtube flags as inactive and also as a failsafe if something in youtube stream breaks
         time.sleep(15*60)
     else:
