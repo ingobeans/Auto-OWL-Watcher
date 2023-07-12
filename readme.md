@@ -8,15 +8,17 @@ If you instead want the newer version that hosts a localhost website with statis
 
 ## **-------------------  Setup instructions  -------------------**
 
-1. Install Python.
+1. Download and extract this project to a folder.
 
-2. Run this command in cmd: `pip install google-api-python-client, google-auth, requests, selenium`
+2. Install Python.
 
-3. Go into settings.py and change youtube_api_key to your Youtube API Key. (How to get API key:  https://blog.hubspot.com/website/how-to-get-youtube-api-key)
+3. Run this command in cmd: `pip install google-api-python-client, google-auth, requests, selenium`
 
-4. Create a discord webhook (for logging) and change webhook_url to your webhook url in settings.py. You can also set discord_webhook_logging to False, if you'd rather want logging in the console.
+4. Go into settings.py and change youtube_api_key to your Youtube API Key. (How to get API key:  https://blog.hubspot.com/website/how-to-get-youtube-api-key)
 
-5. You can now run the script by running "launch headless.vbs"
+5. Create a discord webhook (for logging) and change webhook_url to your webhook url in settings.py. You can also set discord_webhook_logging to False, if you'd rather want logging in the console.
+
+6. You can now run the script by running "launch headless.vbs"
 
 
 ## **-------------------  How it works  -------------------**
