@@ -8,15 +8,17 @@ If you instead want it to send discord messages periodically (or whenever it sta
 
 ## **-------------------  Setup instructions  -------------------**
 
-1. Install Python.
+1. Download and extract this project to a folder.
 
-2. Run this command in cmd: `pip install google-api-python-client, google-auth, requests, selenium, flask`
+2. Install Python.
 
-3. Go into settings.py and change youtube_api_key to your Youtube API Key. (How to get API key:  https://blog.hubspot.com/website/how-to-get-youtube-api-key)
+3. Run this command in cmd: `pip install google-api-python-client, google-auth, requests, selenium, flask`
 
-4. You can now run the script by running "launch headless.vbs"
+4. Go into settings.py and change youtube_api_key to your Youtube API Key. (How to get API key:  https://blog.hubspot.com/website/how-to-get-youtube-api-key)
 
-5. While the script is running, you can goto http://localhost:7676 to see statistics, errors, etc
+5. You can now run the script by running "launch headless.vbs".
+
+6. While the script is running, you can goto http://localhost:7676 to see statistics, status, errors, etc.
 
 
 ## **-------------------  How it works  -------------------**
