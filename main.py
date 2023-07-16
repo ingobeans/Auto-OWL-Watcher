@@ -121,7 +121,7 @@ while True:
         all_time_tokens_earnt = int(all_time_time_spent / 60 * 5)
         estimated_tokens_earnt = int(time_watched / 60 * 5)
         write_to_stats(new_stats)
-        send_status(f"{url}|{estimated_tokens_earnt}|{time_watched_fancy}|{all_time_tokens_earnt}|{all_time_time_spent}")
+        send_status(f"{url}|{estimated_tokens_earnt}|{time_watched_fancy}|{all_time_tokens_earnt}|{format_time(all_time_time_spent)}")
         
         #reload because sometimes youtube flags as inactive and also as a failsafe if something in youtube stream breaks
         time.sleep(30*60)
