@@ -12,7 +12,7 @@ If you instead want it to send discord messages periodically (or whenever it sta
 
 2. Install Python.
 
-3. Run this command in cmd: `pip install google-api-python-client, google-auth, requests, selenium, flask`
+3. Run this command in cmd: `pip install google-api-python-client google-auth requests selenium flask`
 
 4. Go into settings.py and change youtube_api_key to your Youtube API Key. (How to get API key:  https://blog.hubspot.com/website/how-to-get-youtube-api-key)
 
